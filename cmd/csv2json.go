@@ -79,6 +79,7 @@ func processLine(headers []string, dataList []string) (map[string]string, error)
 	recordMap := make(map[string]string)
 
 	for i, name := range headers {
+		name = strings.TrimLeft(name, " ")
 		recordMap[name] = dataList[i]
 	}
 
